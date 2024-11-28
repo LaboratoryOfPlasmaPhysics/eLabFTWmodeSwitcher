@@ -1,0 +1,18 @@
+#urlModeSwitcherButton {
+	position: fixed;
+	left: 10px;
+	top: 15%;
+	transform: translateY(-50%);
+	z-index: 10000;
+	padding: 10px 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+#urlModeSwitcherButton:hover {
+	background-color: #0056b3;
+	}

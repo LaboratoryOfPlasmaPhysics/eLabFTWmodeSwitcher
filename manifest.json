@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "eLabFTW view/edit mode switcher",
+  "version": "1.0",
+  "description": "Adds a floating button on the left hand side of eLabFTW experiments or resources to switch mode from 'view' to 'edit' or the reverse. It also captures the current scroll position so that the edit page should load in approximately the same position as the view page, and vice-versa.",
+  "author": "Garrett Curley, CNRS",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["style.css"],
+      "_comment": "Specify your eLabFTW URL below, or use <all_urls> if you are using multiple eLabFTW instances",
+      "matches": ["https://demo.elabftw.net/*"]
+    }
+  ],
+  "icons": {
+    "16": "icons/pen-icon-16.png",
+    "32": "icons/pen-icon-32.png",
+    "48": "icons/pen-icon-48.png",
+    "128": "icons/pen-icon-128.png"
+  },
+  "homepage_url": "https://www.lpp.fr", 
+  "developer": {
+    "name": "Garrett Curley",
+    "url": "https://github.com/garrettcurley"
+  }
+}
+
